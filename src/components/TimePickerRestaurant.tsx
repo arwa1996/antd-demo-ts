@@ -16,9 +16,8 @@ export const TimePickerRestaurant: React.FC<TimePickerProps> = ({
   }
   return (
     <TimePicker
-      style={{ width: 300 }}
+      style={{ width: 300, borderRadius: "40px" }}
       onChange={onChange}
-      defaultValue={moment("00:00", format)}
       format={format}
       onClick={onClick}
       disabled={disabled}

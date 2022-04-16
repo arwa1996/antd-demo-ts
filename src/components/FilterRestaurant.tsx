@@ -16,36 +16,20 @@ export const FilterResturant: React.FC<filterProps> = ({}) => {
     children.push(
       <>
         <Col span={8}>
-          <Form.Item
-            name={"Name"}
-            label="Name"
-            rules={[
-              {
-                required: true,
-                message: "Input something!",
-              },
-            ]}
-          >
+          <Form.Item name={"Name"} label="Restaurant Name">
             <Input
-              placeholder="placeholder"
+              style={{ borderRadius: "40px" }}
+              placeholder="KFC"
               disabled={nameField}
               onClick={() => setDayTimeFields(true)}
             />
           </Form.Item>
         </Col>
         <Col span={8}>
-          <Form.Item
-            name={"Day"}
-            label="Day"
-            rules={[
-              {
-                required: true,
-                message: "Input something!",
-              },
-            ]}
-          >
+          <Form.Item name={"Day"} label="Day">
             <Select
-              defaultValue="1"
+              style={{ borderRadius: "40px" }}
+              defaultValue=""
               onClick={() => setNameField(true)}
               disabled={dayTimeFields}
             >
@@ -66,16 +50,7 @@ export const FilterResturant: React.FC<filterProps> = ({}) => {
             justifyContent: "center",
           }}
         >
-          <Form.Item
-            name={`field`}
-            label="Time"
-            rules={[
-              {
-                required: true,
-                message: "Input something!",
-              },
-            ]}
-          >
+          <Form.Item name={`Time`} label="Time">
             <TimePickerRestaurant
               onClick={() => setNameField(true)}
               disabled={dayTimeFields}
@@ -102,11 +77,13 @@ export const FilterResturant: React.FC<filterProps> = ({}) => {
       <Row gutter={[48, 24]}>{getFields()}</Row>
       <Row>
         <Col style={{ textAlign: "right" }}>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" shape="round" size="large">
             Search
           </Button>
           <Button
             style={{ margin: "0 8px" }}
+            shape="round"
+            size="large"
             onClick={() => {
               form.resetFields();
               setNameField(false);
