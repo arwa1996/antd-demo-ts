@@ -5,25 +5,22 @@ type modalProps = {
   onCancel: () => void;
   open: boolean;
   children: JSX.Element | JSX.Element[] | React.ReactNode;
-  footer?: React.ReactNode;
 };
 
 export const ModalResturant: React.FC<modalProps> = ({
   onCancel,
   open,
   children,
-  footer,
 }) => {
   return (
     <div>
       <Modal
-        title="Lessons Modal"
+        title="Restaurants"
         visible={open}
         onCancel={() => {
           onCancel();
         }}
-        okButtonProps={{ style: { display: "none" } }}
-        //   footer={[null, null]}
+        footer={null}
       >
         <div>{children}</div>
       </Modal>

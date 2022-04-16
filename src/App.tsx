@@ -83,7 +83,14 @@ function App() {
         open={isModalVisible}
         onCancel={() => setIsModalVisible(false)}
       >
-        {collectionMode ? <ListResturant data={data} /> : <p>workin hours</p>}
+        {collectionMode ? (
+          <ListResturant
+            data={data}
+            onClickCollection={() => setIsModalVisible(false)}
+          />
+        ) : (
+          <p>workin hours</p>
+        )}
       </ModalResturant>
     </div>
   );
