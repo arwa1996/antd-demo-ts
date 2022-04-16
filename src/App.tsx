@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { ModalResturant } from "./components/ModalResturant";
 import { CardResturant } from "./components/CardResturant";
 import { ListResturant } from "./components/ListResturant";
+import { FilterResturant } from "./components/FilterRestaurant";
+import { Col, Row } from "antd";
 
 function App() {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -74,24 +76,32 @@ function App() {
         padding: 50,
       }}
     >
-      <CardResturant
-        resturants={resturants}
-        onClickCollections={onClickCollections}
-        onClickWorkingHours={onClickWorkingHours}
-      />
-      <ModalResturant
-        open={isModalVisible}
-        onCancel={() => setIsModalVisible(false)}
-      >
-        {collectionMode ? (
-          <ListResturant
-            data={data}
-            onClickCollection={() => setIsModalVisible(false)}
+      <Row gutter={[24, 24]}>
+        <Col span={22}>
+          <FilterResturant />
+        </Col>
+
+        <Col>
+          <CardResturant
+            resturants={resturants}
+            onClickCollections={onClickCollections}
+            onClickWorkingHours={onClickWorkingHours}
           />
-        ) : (
-          <p>workin hours</p>
-        )}
-      </ModalResturant>
+          <ModalResturant
+            open={isModalVisible}
+            onCancel={() => setIsModalVisible(false)}
+          >
+            {collectionMode ? (
+              <ListResturant
+                data={data}
+                onClickCollection={() => setIsModalVisible(false)}
+              />
+            ) : (
+              <p>workin hours</p>
+            )}
+          </ModalResturant>
+        </Col>
+      </Row>
     </div>
   );
 }

@@ -14,7 +14,7 @@ export const CardResturant: React.FC<cardProps> = ({
 }) => {
   const { Meta } = Card;
   return (
-    <Row gutter={[16, 16]}>
+    <Row gutter={[30, 16]}>
       {resturants.map((resturant) => (
         <Col xs={26} xl={8}>
           <Card
