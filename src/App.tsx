@@ -5,51 +5,13 @@ import { CardResturant } from "./components/CardResturant";
 import { ListResturant } from "./components/ListResturant";
 import { FilterResturant } from "./components/FilterRestaurant";
 import { Col, Row } from "antd";
+import resturants from "./restaurants.json";
 
 function App() {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [workingHoursMode, setWorkingHoursMode] = useState(false);
   const [collectionMode, setCollectionMode] = useState(false);
   const [workingHours, setWorkingHours] = useState("");
 
-  const resturants = [
-    {
-      name: "PAUL",
-      Image:
-        "	https://media-cdn.tripadvisor.com/media/photo-s/10/89/ef/03/paul.jpg",
-      workingHours: "Mon-Fri",
-    },
-    {
-      name: "Coffee Shop",
-      Image:
-        "	https://trungimgs.trung-nguyen-online.com/can-i-turn-my-coffee-into-iced-cofee-.jpg",
-      workingHours: "Mon-Fri",
-    },
-    {
-      name: "Coffee Shop",
-      Image:
-        "	https://trungimgs.trung-nguyen-online.com/can-i-turn-my-coffee-into-iced-cofee-.jpg",
-      workingHours: "Mon-Fri",
-    },
-    {
-      name: "PAUL",
-      Image:
-        "	https://media-cdn.tripadvisor.com/media/photo-s/10/89/ef/03/paul.jpg",
-      workingHours: "Mon-Fri",
-    },
-    {
-      name: "Coffee Shop",
-      Image:
-        "	https://trungimgs.trung-nguyen-online.com/can-i-turn-my-coffee-into-iced-cofee-.jpg",
-      workingHours: "Mon-Fri",
-    },
-    {
-      name: "PAUL",
-      Image:
-        "	https://media-cdn.tripadvisor.com/media/photo-s/10/89/ef/03/paul.jpg",
-      workingHours: "Mon-Fri",
-    },
-  ];
   const data = [
     "Racing car sprays burning fuel into crowd.",
     "Japanese princess to wed commoner.",
@@ -60,16 +22,15 @@ function App() {
 
   const onClickCollections = () => {
     setCollectionMode(true);
-    // setWorkingHoursMode(false);
     setIsModalVisible(true);
   };
 
-  const onClickWorkingHours = () => {
+  const onClickWorkingHours = (workingHours: string) => {
     setIsModalVisible(true);
     setCollectionMode(false);
-    setWorkingHoursMode(true);
+    setWorkingHours(workingHours);
   };
-  console.log(workingHours);
+
   return (
     <div
       style={{
@@ -83,7 +44,7 @@ function App() {
 
         <Col>
           <CardResturant
-            resturants={resturants}
+            resturants={resturants.data.rows}
             onClickCollections={onClickCollections}
             onClickWorkingHours={onClickWorkingHours}
           />
@@ -97,7 +58,7 @@ function App() {
                 onClickCollection={() => setIsModalVisible(false)}
               />
             ) : (
-              <p>workin hours</p>
+              <p>{workingHours}</p>
             )}
           </ModalResturant>
         </Col>

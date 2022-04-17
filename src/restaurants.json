@@ -1,0 +1,403 @@
+{
+  "data": {
+    "count": 1715,
+    "rows": [
+      {
+        "id": "29b22aa5-83c9-499e-9379-3fc415fb826c",
+        "restaurantName": "Mac2",
+        "operationHours": [
+          {
+            "dayOfWeek": "Mon",
+            "timeOpen": 480,
+            "timeClose": 1380
+          }
+        ]
+      },
+      {
+        "id": "df5892c6-a3d5-42a7-a37a-37c0820ec4a1",
+        "restaurantName": "Mac3",
+        "operationHours": [
+          {
+            "dayOfWeek": "Mon",
+            "timeOpen": 360,
+            "timeClose": 120
+          }
+        ]
+      },
+      {
+        "id": "177e14fe-1dfb-4b87-834b-cc671c92aad8",
+        "restaurantName": "Mac5",
+        "operationHours": [
+          {
+            "dayOfWeek": "Mon",
+            "timeOpen": 60,
+            "timeClose": 540
+          }
+        ]
+      },
+      {
+        "id": "e2a2c9c3-b54b-44fd-9a17-6cb7e9202d57",
+        "restaurantName": "Mac6",
+        "operationHours": [
+          {
+            "dayOfWeek": "Mon",
+            "timeOpen": 120,
+            "timeClose": 600
+          }
+        ]
+      },
+      {
+        "id": "505dfdf6-9732-43b9-b398-55e625e1960b",
+        "restaurantName": "Mac7",
+        "operationHours": [
+          {
+            "dayOfWeek": "Mon",
+            "timeOpen": 780,
+            "timeClose": 750
+          }
+        ]
+      },
+      {
+        "id": "7463d1ef-b919-4065-b620-1ce2308eac94",
+        "restaurantName": "Mac8",
+        "operationHours": [
+          {
+            "dayOfWeek": "Fri",
+            "timeOpen": 780,
+            "timeClose": 750
+          }
+        ]
+      },
+      {
+        "id": "987830b8-ad39-4a03-a714-b664eb3d7d46",
+        "restaurantName": "Blu Restaurant",
+        "operationHours": [
+          {
+            "dayOfWeek": "Sun",
+            "timeOpen": 420,
+            "timeClose": 900
+          },
+          {
+            "dayOfWeek": "Sat",
+            "timeOpen": 420,
+            "timeClose": 900
+          }
+        ]
+      },
+      {
+        "id": "8b130972-409b-4ec7-9326-54e00a21dce7",
+        "restaurantName": "Santorini's Mediterranean Cuisine",
+        "operationHours": [
+          {
+            "dayOfWeek": "Sun",
+            "timeOpen": 480,
+            "timeClose": 1350
+          },
+          {
+            "dayOfWeek": "Sat",
+            "timeOpen": 480,
+            "timeClose": 1350
+          },
+          {
+            "dayOfWeek": "Fri",
+            "timeOpen": 480,
+            "timeClose": 1350
+          },
+          {
+            "dayOfWeek": "Thu",
+            "timeOpen": 480,
+            "timeClose": 1350
+          },
+          {
+            "dayOfWeek": "Wed",
+            "timeOpen": 480,
+            "timeClose": 1350
+          },
+          {
+            "dayOfWeek": "Tues",
+            "timeOpen": 480,
+            "timeClose": 1350
+          },
+          {
+            "dayOfWeek": "Mon",
+            "timeOpen": 480,
+            "timeClose": 1350
+          }
+        ]
+      },
+      {
+        "id": "9318e668-4d40-492d-8d50-3b6005e38aab",
+        "restaurantName": "Parallel 37",
+        "operationHours": [
+          {
+            "dayOfWeek": "Sun",
+            "timeOpen": 390,
+            "timeClose": 765
+          }
+        ]
+      },
+      {
+        "id": "f5c6d580-d29e-4fc2-b89c-a250e90eced3",
+        "restaurantName": "Starbelly",
+        "operationHours": [
+          {
+            "dayOfWeek": "Sat",
+            "timeOpen": 480,
+            "timeClose": 780
+          },
+          {
+            "dayOfWeek": "Fri",
+            "timeOpen": 465,
+            "timeClose": 1110
+          },
+          {
+            "dayOfWeek": "Wed",
+            "timeOpen": 390,
+            "timeClose": 840
+          },
+          {
+            "dayOfWeek": "Tues",
+            "timeOpen": 390,
+            "timeClose": 840
+          },
+          {
+            "dayOfWeek": "Mon",
+            "timeOpen": 390,
+            "timeClose": 840
+          }
+        ]
+      },
+      {
+        "id": "3777ccba-18e3-4bac-bf93-7a54c013ea0b",
+        "restaurantName": "Brass Tacks",
+        "operationHours": [
+          {
+            "dayOfWeek": "Sun",
+            "timeOpen": 300,
+            "timeClose": 135
+          },
+          {
+            "dayOfWeek": "Fri",
+            "timeOpen": 465,
+            "timeClose": 825
+          },
+          {
+            "dayOfWeek": "Wed",
+            "timeOpen": 465,
+            "timeClose": 735
+          },
+          {
+            "dayOfWeek": "Mon",
+            "timeOpen": 480,
+            "timeClose": 1350
+          }
+        ]
+      },
+      {
+        "id": "3ca30457-7c3b-4ee4-84d7-7b933c25c759",
+        "restaurantName": "Pier 23",
+        "operationHours": [
+          {
+            "dayOfWeek": "Thu",
+            "timeOpen": 420,
+            "timeClose": 960
+          },
+          {
+            "dayOfWeek": "Mon",
+            "timeOpen": 420,
+            "timeClose": 960
+          }
+        ]
+      },
+      {
+        "id": "cffa7166-6612-44bd-b560-16fb486c8b83",
+        "restaurantName": "Plumed Horse",
+        "operationHours": [
+          {
+            "dayOfWeek": "Sat",
+            "timeOpen": 360,
+            "timeClose": 930
+          },
+          {
+            "dayOfWeek": "Fri",
+            "timeOpen": 420,
+            "timeClose": 225
+          },
+          {
+            "dayOfWeek": "Sun",
+            "timeOpen": 465,
+            "timeClose": 945
+          },
+          {
+            "dayOfWeek": "Thu",
+            "timeOpen": 465,
+            "timeClose": 945
+          },
+          {
+            "dayOfWeek": "Wed",
+            "timeOpen": 465,
+            "timeClose": 945
+          },
+          {
+            "dayOfWeek": "Tues",
+            "timeOpen": 465,
+            "timeClose": 750
+          }
+        ]
+      },
+      {
+        "id": "32eb6133-bbe3-4b9c-9a2e-564b29b94424",
+        "restaurantName": "Everest",
+        "operationHours": [
+          {
+            "dayOfWeek": "Sat",
+            "timeOpen": 465,
+            "timeClose": 720
+          },
+          {
+            "dayOfWeek": "Thu",
+            "timeOpen": 900,
+            "timeClose": 735
+          },
+          {
+            "dayOfWeek": "Wed",
+            "timeOpen": 330,
+            "timeClose": 210
+          },
+          {
+            "dayOfWeek": "Mon",
+            "timeOpen": 330,
+            "timeClose": 210
+          }
+        ]
+      },
+      {
+        "id": "742531a9-1b67-4027-a782-0f055ea9f9bd",
+        "restaurantName": "The Aviary",
+        "operationHours": [
+          {
+            "dayOfWeek": "Sun",
+            "timeOpen": 465,
+            "timeClose": 120
+          },
+          {
+            "dayOfWeek": "Thu",
+            "timeOpen": 1005,
+            "timeClose": 765
+          },
+          {
+            "dayOfWeek": "Tues",
+            "timeOpen": 420,
+            "timeClose": 1365
+          }
+        ]
+      },
+      {
+        "id": "8ee4e04a-13f3-478c-b695-5e15e0671aa4",
+        "restaurantName": "Proxi",
+        "operationHours": [
+          {
+            "dayOfWeek": "Sun",
+            "timeOpen": 375,
+            "timeClose": 795
+          },
+          {
+            "dayOfWeek": "Sat",
+            "timeOpen": 420,
+            "timeClose": 645
+          },
+          {
+            "dayOfWeek": "Thu",
+            "timeOpen": 1005,
+            "timeClose": 765
+          },
+          {
+            "dayOfWeek": "Tues",
+            "timeOpen": 1005,
+            "timeClose": 765
+          }
+        ]
+      },
+      {
+        "id": "a62d1ab5-0032-45c2-8653-1a12313e8c2f",
+        "restaurantName": "The Rosebud",
+        "operationHours": [
+          {
+            "dayOfWeek": "Thu",
+            "timeOpen": 420,
+            "timeClose": 735
+          }
+        ]
+      },
+      {
+        "id": "1a4924c7-89a0-4f98-9910-e8514f4d9a69",
+        "restaurantName": "The Signature Room",
+        "operationHours": [
+          {
+            "dayOfWeek": "Sun",
+            "timeOpen": 915,
+            "timeClose": 735
+          },
+          {
+            "dayOfWeek": "Sat",
+            "timeOpen": 315,
+            "timeClose": 1140
+          },
+          {
+            "dayOfWeek": "Fri",
+            "timeOpen": 300,
+            "timeClose": 675
+          },
+          {
+            "dayOfWeek": "Wed",
+            "timeOpen": 300,
+            "timeClose": 675
+          },
+          {
+            "dayOfWeek": "Tues",
+            "timeOpen": 300,
+            "timeClose": 675
+          }
+        ]
+      },
+      {
+        "id": "90565af0-510d-4112-a127-a17cbfc1bca3",
+        "restaurantName": "Catch 35",
+        "operationHours": [
+          {
+            "dayOfWeek": "Fri",
+            "timeOpen": 315,
+            "timeClose": 1230
+          }
+        ]
+      },
+      {
+        "id": "548b0f61-2fb5-489b-91f9-bf1e6f65999a",
+        "restaurantName": "Gemini",
+        "operationHours": [
+          {
+            "dayOfWeek": "Fri",
+            "timeOpen": 825,
+            "timeClose": 765
+          },
+          {
+            "dayOfWeek": "Thu",
+            "timeOpen": 300,
+            "timeClose": 225
+          },
+          {
+            "dayOfWeek": "Tues",
+            "timeOpen": 300,
+            "timeClose": 225
+          },
+          {
+            "dayOfWeek": "Mon",
+            "timeOpen": 300,
+            "timeClose": 225
+          }
+        ]
+      }
+    ]
+  },
+  "message": "findAll"
+}
