@@ -1,68 +1,109 @@
-/* eslint-disable array-callback-return */
-import React, { useState } from "react";
-import { ModalResturant } from "./components/ModalResturant";
-import { CardResturant } from "./components/CardResturant";
-import { ListResturant } from "./components/ListResturant";
-import { FilterResturant } from "./components/FilterRestaurant";
-import { Col, Row } from "antd";
-import resturants from "./restaurants.json";
+import React, { useState } from 'react';
+import {
+  Select,
+  Typography,
+  Divider,
+  Layout,
+  Card,
+  Input,
+  Button,
+  List,
+  Skeleton,
+  Avatar,
+} from 'antd';
+import { Content } from 'antd/lib/layout/layout';
+import groups from './demos/kisi/groups.json';
+import {
+  TeamOutlined,
+  TabletOutlined,
+  ClockCircleOutlined,
+  MobileOutlined,
+} from '@ant-design/icons';
 
 function App() {
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [collectionMode, setCollectionMode] = useState(false);
-  const [workingHours, setWorkingHours] = useState("");
-
-  const data = [
-    "Racing car sprays burning fuel into crowd.",
-    "Japanese princess to wed commoner.",
-    "Australian walks 100km after outback crash.",
-    "Man charged over missing wedding girl.",
-    "Los Angeles battles huge wildfires.",
-  ];
-
-  const onClickCollections = () => {
-    setCollectionMode(true);
-    setIsModalVisible(true);
-  };
-
-  const onClickWorkingHours = (workingHours: string) => {
-    setIsModalVisible(true);
-    setCollectionMode(false);
-    setWorkingHours(workingHours);
-  };
-
+  const { Title, Text } = Typography;
+  const groupsNumber = 11;
   return (
-    <div
-      style={{
-        padding: 50,
-      }}
-    >
-      <Row gutter={[24, 24]}>
-        <Col span={22}>
-          <FilterResturant />
-        </Col>
-
-        <Col>
-          <CardResturant
-            resturants={resturants.data.rows}
-            onClickCollections={onClickCollections}
-            onClickWorkingHours={onClickWorkingHours}
-          />
-          <ModalResturant
-            open={isModalVisible}
-            onCancel={() => setIsModalVisible(false)}
+    <div>
+      <Layout>
+        <Layout className='site-layout'>
+          <Content
+            className='site-layout-background'
+            style={{
+              margin: '24px 16px',
+              padding: 24,
+              minHeight: 280,
+            }}
           >
-            {collectionMode ? (
-              <ListResturant
-                data={data}
-                onClickCollection={() => setIsModalVisible(false)}
+            <Title level={3}>Groups {groupsNumber}</Title>
+            <Text type='secondary'>
+              Add users to Groups and assign different access rights
+            </Text>
+            <Card
+              title={
+                <Input
+                  placeholder='Search Groups...'
+                  style={{ width: '80%' }}
+                />
+              }
+              extra={
+                <Button type='primary' ghost>
+                  Primary
+                </Button>
+              }
+            >
+              {/* {groups.map((group) => {
+                console.log(group);
+                return <p>{group.name}</p>;
+              })} */}
+              {/* <List
+                className='demo-loadmore-list'
+                itemLayout='horizontal'
+                dataSource={groups}
+                renderItem={(item) => (
+                  <List.Item
+                    actions={[
+                      <a key='list-loadmore-edit'>edit</a>,
+                      <a key='list-loadmore-more'>more</a>,
+                    ]}
+                  >
+                    <Skeleton avatar title={false} active>
+                      <List.Item.Meta
+                        avatar={}
+                        title={<a href='https://ant.design'>{item.name}</a>}
+                        description='Ant Design, a design language for background applications, is refined by Ant UED Team'
+                      />
+                      <div>content</div>
+                    </Skeleton>
+                  </List.Item>
+                )}
+              /> */}
+              <List
+                itemLayout='horizontal'
+                dataSource={groups}
+                renderItem={(item) => (
+                  <List.Item
+                    actions={[
+                      <TabletOutlined />,
+                      <Text>6</Text>,
+                      <TeamOutlined size={50} />,
+                      <Text>1</Text>,
+                      <ClockCircleOutlined />,
+                      <MobileOutlined />,
+                    ]}
+                  >
+                    <List.Item.Meta
+                      avatar={<TeamOutlined size={50} />}
+                      title={<a href='https://ant.design'>{item.name}</a>}
+                      description={item.description}
+                    />
+                  </List.Item>
+                )}
               />
-            ) : (
-              <p>{workingHours}</p>
-            )}
-          </ModalResturant>
-        </Col>
-      </Row>
+            </Card>
+          </Content>
+        </Layout>
+      </Layout>
     </div>
   );
 }
