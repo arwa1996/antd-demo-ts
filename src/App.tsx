@@ -1,30 +1,16 @@
 import React, { useState } from 'react';
-import {
-  Select,
-  Typography,
-  Divider,
-  Layout,
-  Card,
-  Input,
-  Button,
-  List,
-  Skeleton,
-  Avatar,
-} from 'antd';
+import { Typography, Layout, Input, Button } from 'antd';
 import { Content } from 'antd/lib/layout/layout';
 import groups from './demos/kisi/groups.json';
-import {
-  TeamOutlined,
-  TabletOutlined,
-  ClockCircleOutlined,
-  MobileOutlined,
-} from '@ant-design/icons';
+import { TeamOutlined } from '@ant-design/icons';
 import { CardGroup } from './components/CardGroup';
 import { ListGroup } from './components/ListGroup';
 
 function App() {
   const { Title, Text } = Typography;
   const groupsNumber = 11;
+
+  console.log(groups);
   return (
     <div>
       <Layout>
@@ -45,26 +31,39 @@ function App() {
               title={
                 <Input
                   placeholder='Search Groups...'
-                  style={{ width: '80%' }}
+                  style={{ width: '80%', borderRadius: '8px' }}
+                  size='large'
                 />
               }
               extra={
-                <Button type='primary' ghost>
-                  Primary
+                <Button
+                  type='primary'
+                  ghost
+                  style={{ borderRadius: '8px' }}
+                  size='large'
+                >
+                  Add Group
                 </Button>
               }
             >
               <ListGroup
                 data={groups}
-                actions={[
-                  <TabletOutlined />,
-                  <Text>6</Text>,
-                  <TeamOutlined size={50} />,
-                  <Text>1</Text>,
-                  <ClockCircleOutlined />,
-                  <MobileOutlined />,
-                ]}
-                avatar={<TeamOutlined size={50} />}
+                avatar={
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      borderRadius: '10px',
+                      width: '50px',
+                      height: '50px',
+                      backgroundColor: '	#E8E8E8',
+                    }}
+                  >
+                    <TeamOutlined size={50} style={{ fontSize: '1.5rem' }} />
+                  </div>
+                }
               />
             </CardGroup>
           </Content>

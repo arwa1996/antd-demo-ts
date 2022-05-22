@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Card, Button, Row, Col } from 'antd';
+import { Card } from 'antd';
 
 type cardProps = {
   onClickCollections?: () => void;
@@ -11,10 +11,12 @@ type cardProps = {
 };
 
 export const CardGroup: React.FC<cardProps> = ({ title, extra, children }) => {
-  const { Meta } = Card;
-
   return (
-    <Card title={title} extra={extra}>
+    <Card
+      title={title}
+      extra={extra}
+      style={{ borderRadius: '10px', marginTop: '20px' }}
+    >
       {children}
     </Card>
   );
