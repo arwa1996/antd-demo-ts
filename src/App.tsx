@@ -19,6 +19,8 @@ import {
   ClockCircleOutlined,
   MobileOutlined,
 } from '@ant-design/icons';
+import { CardGroup } from './components/CardGroup';
+import { ListGroup } from './components/ListGroup';
 
 function App() {
   const { Title, Text } = Typography;
@@ -39,7 +41,7 @@ function App() {
             <Text type='secondary'>
               Add users to Groups and assign different access rights
             </Text>
-            <Card
+            <CardGroup
               title={
                 <Input
                   placeholder='Search Groups...'
@@ -52,55 +54,19 @@ function App() {
                 </Button>
               }
             >
-              {/* {groups.map((group) => {
-                console.log(group);
-                return <p>{group.name}</p>;
-              })} */}
-              {/* <List
-                className='demo-loadmore-list'
-                itemLayout='horizontal'
-                dataSource={groups}
-                renderItem={(item) => (
-                  <List.Item
-                    actions={[
-                      <a key='list-loadmore-edit'>edit</a>,
-                      <a key='list-loadmore-more'>more</a>,
-                    ]}
-                  >
-                    <Skeleton avatar title={false} active>
-                      <List.Item.Meta
-                        avatar={}
-                        title={<a href='https://ant.design'>{item.name}</a>}
-                        description='Ant Design, a design language for background applications, is refined by Ant UED Team'
-                      />
-                      <div>content</div>
-                    </Skeleton>
-                  </List.Item>
-                )}
-              /> */}
-              <List
-                itemLayout='horizontal'
-                dataSource={groups}
-                renderItem={(item) => (
-                  <List.Item
-                    actions={[
-                      <TabletOutlined />,
-                      <Text>6</Text>,
-                      <TeamOutlined size={50} />,
-                      <Text>1</Text>,
-                      <ClockCircleOutlined />,
-                      <MobileOutlined />,
-                    ]}
-                  >
-                    <List.Item.Meta
-                      avatar={<TeamOutlined size={50} />}
-                      title={<a href='https://ant.design'>{item.name}</a>}
-                      description={item.description}
-                    />
-                  </List.Item>
-                )}
+              <ListGroup
+                data={groups}
+                actions={[
+                  <TabletOutlined />,
+                  <Text>6</Text>,
+                  <TeamOutlined size={50} />,
+                  <Text>1</Text>,
+                  <ClockCircleOutlined />,
+                  <MobileOutlined />,
+                ]}
+                avatar={<TeamOutlined size={50} />}
               />
-            </Card>
+            </CardGroup>
           </Content>
         </Layout>
       </Layout>
