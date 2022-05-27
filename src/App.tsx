@@ -3,14 +3,23 @@ import { Typography, Layout, Input, Button } from 'antd';
 import { Content } from 'antd/lib/layout/layout';
 import groups from './demos/kisi/groups.json';
 import { TeamOutlined } from '@ant-design/icons';
-import { CardGroup } from './components/CardGroup';
-import { ListGroup } from './components/ListGroup';
+import { CardGroup } from './components/Cards/CardGroup';
+import { ListGroup } from './components/Lists/ListGroup';
+import { ModalGroups } from './components/Modals/ModalGroups';
+import { SelectPlaces } from './components/SelectFields/SelectPlaces';
+import { TagGroups } from './components/Tags/Tag';
+
+const options: string[] = ['Jack', 'Lucy', 'Tom', 'Arwa'];
 
 function App() {
   const { Title, Text } = Typography;
   const groupsNumber = 11;
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedItems, setSelectedItems] = useState<string[]>([]);
 
-  console.log(groups);
+  const onSelect = (value: string) => {
+    setSelectedItems([...selectedItems, value]);
+  };
   return (
     <div>
       <Layout>
@@ -41,6 +50,7 @@ function App() {
                   ghost
                   style={{ borderRadius: '8px' }}
                   size='large'
+                  onClick={() => setIsModalVisible(true)}
                 >
                   Add Group
                 </Button>
@@ -66,6 +76,31 @@ function App() {
                 }
               />
             </CardGroup>
+            <ModalGroups
+              open={isModalVisible}
+              onCancel={() => setIsModalVisible(false)}
+              modalTitle='Add Doors'
+            >
+              <div
+                style={{
+                  marginBottom: '1rem',
+                }}
+              >
+                <SelectPlaces
+                  placeholder='Select Places'
+                  options={options}
+                  onSelect={onSelect}
+                />
+              </div>
+              <div>
+                <SelectPlaces placeholder='Select Places' options={options} />
+              </div>
+              <div style={{ marginTop: '1rem' }}>
+                {selectedItems?.map((item, index) => (
+                  <TagGroups tagTitle={item} key={index} />
+                ))}
+              </div>
+            </ModalGroups>
           </Content>
         </Layout>
       </Layout>
