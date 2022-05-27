@@ -42,8 +42,10 @@ export const SelectPlaces: React.FC<selectProps> = ({
           .includes(input.toLowerCase())
       }
     >
-      {filteredOptions?.map((option) => (
-        <Option value={option}>{option}</Option>
+      {filteredOptions?.map((option, index) => (
+        <Option value={option} key={index}>
+          {option}
+        </Option>
       ))}
     </Select>
   );
