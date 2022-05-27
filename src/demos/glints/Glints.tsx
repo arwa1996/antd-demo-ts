@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import { ModalResturant } from "../../components/ModalResturant";
-import { CardResturant } from "../../components/CardResturant";
-import { ListResturant } from "../../components/ListResturant";
-import { FilterResturant } from "../../components/FilterRestaurant";
-import { Col, Row } from "antd";
-import resturants from "./restaurants.json";
+import React, { useState } from 'react';
+import { ModalResturant } from '../../components/Modals/ModalResturant';
+import { CardResturant } from '../../components/Cards/CardResturant';
+import { ListResturant } from '../../components/Lists/ListResturant';
+import { FilterResturant } from '../../components/SearchBars/FilterRestaurant';
+import { Col, Row } from 'antd';
+import resturants from './restaurants.json';
 
 function Glints() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [collectionMode, setCollectionMode] = useState(false);
-  const [workingHours, setWorkingHours] = useState("");
+  const [workingHours, setWorkingHours] = useState('');
 
   const data = [
-    "Racing car sprays burning fuel into crowd.",
-    "Japanese princess to wed commoner.",
-    "Australian walks 100km after outback crash.",
-    "Man charged over missing wedding girl.",
-    "Los Angeles battles huge wildfires.",
+    'Racing car sprays burning fuel into crowd.',
+    'Japanese princess to wed commoner.',
+    'Australian walks 100km after outback crash.',
+    'Man charged over missing wedding girl.',
+    'Los Angeles battles huge wildfires.',
   ];
 
   const onClickCollections = () => {
