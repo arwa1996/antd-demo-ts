@@ -34,7 +34,6 @@ export const SelectPlaces: React.FC<selectProps> = ({
       onSelect={(value: string) => {
         if (onSelect) onSelect(value);
       }}
-      mode='multiple'
       onSearch={onSearch}
       filterOption={(input, option) =>
         (option!.children as unknown as string)

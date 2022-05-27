@@ -81,9 +81,12 @@ function App() {
               onCancel={() => setIsModalVisible(false)}
               modalTitle='Add Doors'
             >
+              <div>
+                <SelectPlaces placeholder='Select Places' options={options} />
+              </div>
               <div
                 style={{
-                  marginBottom: '1rem',
+                  marginTop: '1rem',
                 }}
               >
                 <SelectPlaces
@@ -92,9 +95,7 @@ function App() {
                   onSelect={onSelect}
                 />
               </div>
-              <div>
-                <SelectPlaces placeholder='Select Places' options={options} />
-              </div>
+
               <div style={{ marginTop: '1rem' }}>
                 {selectedItems?.map((item, index) => (
                   <TagGroups tagTitle={item} key={index} />
